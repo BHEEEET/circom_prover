@@ -1,4 +1,21 @@
 {
   "name": "circom",
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "yarn@4.6.0",
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "circom_tester": "^0.0.24",
+    "mocha": "^11.7.1",
+    "snarkjs": "^0.7.5"
+  },
+  "dependencies": {
+    "circomlib": "^2.0.5"
+  },
+  "scripts": {
+    "compile": "circom circuits/square.circom --r1cs --wasm --sym -o build/",
+    "test": "mocha tests/square.test.js --timeout 60000",
+    "setup": "node scripts/setup.js",
+    "prove": "node scripts/prove.js",
+    "verify": "node scripts/verify.js",
+    "info": "snarkjs info -r build/square.r1cs"
+  }
 }
