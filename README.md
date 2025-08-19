@@ -1,4 +1,3 @@
-# circom
 # Simple Circom ZK Environment
 
 A beginner-friendly setup to test Zero-Knowledge circuits using Circom, starting with a simple "square of a number" proof.
@@ -32,21 +31,17 @@ circom --version
 ### 2. Setup Project
 
 ```bash
-# Run the setup script
-chmod +x setup_simple_circom.sh
-./setup_simple_circom.sh
-
 # Navigate to project
-cd circom-test
+cd circom_prover
 
 # Install dependencies
-npm install
+yarn
 ```
 
 ### 3. Compile Circuit
 
 ```bash
-npm run compile
+yarn compile
 ```
 
 This creates:
@@ -57,7 +52,7 @@ This creates:
 ### 4. Run Tests
 
 ```bash
-npm test
+yarn test
 ```
 
 Tests various scenarios:
@@ -69,7 +64,7 @@ Tests various scenarios:
 ### 5. Generate Keys (Trusted Setup)
 
 ```bash
-npm run setup
+yarn setup
 ```
 
 This performs the trusted setup ceremony and generates:
@@ -93,7 +88,7 @@ node scripts/prove.js verify
 ## Project Structure
 
 ```
-circom-test/
+circom_prover/
 ├── circuits/
 │   └── square.circom          # ZK circuit definition
 ├── tests/
@@ -147,7 +142,7 @@ Once comfortable with this simple circuit, you can:
 - Verify syntax in `square.circom`
 
 **Tests failing?**
-- Run `npm run compile` first
+- Run `yarn compile` first
 - Check constraint logic
 
 **Setup fails?**  
