@@ -5,6 +5,7 @@ yarn-error.log*
 .pnp.*
 .pnpm-debug.log*
 .cache/
+.yarn
 
 # Circom build artifacts
 build/
