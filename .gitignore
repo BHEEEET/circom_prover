@@ -23,6 +23,10 @@ witness.json
 # Powers of Tau files (big & reproducible)
 *.ptau
 
+# Keep verification key only (ignore everything else in /keys)
+keys/*
+!keys/verification_key.json
+
 # Logs & system files
 .DS_Store
 Thumbs.db
